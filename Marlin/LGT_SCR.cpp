@@ -148,7 +148,7 @@ uint8_t led_times = 1, led_status=0;
 int led_counter = 0;
 /*************************************
 FUNCTION:	The state of LED lamp
-LED:	Color of LED lamp;(LED_RED¡¢LED_GREEN¡¢LED_BLUE)
+LED:	Color of LED lamp;(LED_REDÂ¡Â¢LED_GREENÂ¡Â¢LED_BLUE)
 **************************************/
 void LGT_SCR::LED_Bright_State(uint8_t LED, uint16_t per, uint8_t mod)
 {
@@ -396,7 +396,7 @@ void LGT_SCR::LGT_MAC_Send_Filename(uint16_t Addr, uint16_t Serial_Num)
 	data_storage[4] = (Addr & 0xFF00) >> 8;
 	data_storage[5] = Addr;
 	card.getfilename(Serial_Num);
-	for (int i = 0; i < 31; i++)
+	for (int i = 0; i < 27; i++)
 	{
 		data_storage[6 + i] = card.longFilename[i];
 	}
